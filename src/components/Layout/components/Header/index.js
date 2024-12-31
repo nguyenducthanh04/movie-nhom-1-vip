@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
+import Tippy from '@tippyjs/react/headless'; 
 import { Link, useNavigate } from "react-router-dom";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import LogoBoHuc from "../../../../assets/images/logo-bohu.jpg"
 
 const cx = classNames.bind(styles);
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isVisibleAccount, setIsVisibleAccount] = useState(false)
     const [keyword, setKeyword] = useState("");
     const navigate = useNavigate();
     const handleSearch = () => {
@@ -23,13 +26,14 @@ function Header() {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
+    const showAccount = () => setIsVisibleAccount(true);
+    const hideAccount = () => setIsVisibleAccount(false);
     return (
         <div className={cx("wrapper")}>
             <div className={cx("navbar")}>
                 <div className={cx("nav-left")}>
                     <Link to={"/"} className={cx("logo-name")}>
-                        <h2>ThanhNguyen</h2>
+                        <img className={cx("logo-img")} src={LogoBoHuc}></img>
                     </Link>
                     <ul>
                         <Link to={"/"} className={cx("link")}>
@@ -51,11 +55,26 @@ function Header() {
                             <li>Phim Yêu Thích</li>
                         </Link>
                         <Link to={"/about"} className={cx("link")}>
-                            <li>Giới thiệu</li>
+                            <li>Giới Thiệu</li>
                         </Link>
                     </ul>
                 </div>
                 <div className={cx("nav-right")}>
+                    <div className={cx("login")}>
+                        <Link to={"/login"} className={cx("redirect-login")}>
+                        <button>Login</button>
+                        </Link>
+                    </div>
+                    {/* <div className={cx("account")}>
+                        <Tippy render={(attrs) => (
+                   <button className={cx("btn-logout-account")}>Logout</button>
+                )} placement="bottom" interactive visible={isVisibleAccount} onClickOutside={hideAccount }>  
+                 <div className={cx("name-user")}>
+                            <p onClick={isVisibleAccount ? hideAccount : showAccount}>Xin chào, ThanhNguyen !</p>
+                        </div>
+                </Tippy>
+                  
+                    </div> */}
                     <div className={cx("search-container")}>
                         <input
                             placeholder="Tìm kiếm phim..."

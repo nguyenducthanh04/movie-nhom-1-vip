@@ -10,11 +10,12 @@ import {
     MDBBtn,
     MDBTypography,
 } from "mdb-react-ui-kit";
+import LogoBoHuc from "~/assets/images/logo-bohu.jpg"
 import Avt from "~/assets/images/thanhdn.jpg";
-import JujutsuKaisen from "~/assets/images/jujutsukaisen.webp";
-import DragonBall from "~/assets/images/dragonball.webp";
-import HunterXHunter from "~/assets/images/hunter.jpg";
-import WindBreaker from "~/assets/images/windbreaker.jpg";
+import JujutsuKaisen from "~/assets/images/thanh.jpg";
+import DragonBall from "~/assets/images/phong.jpg";
+import HunterXHunter from "~/assets/images/thang1.jpg";
+import WindBreaker from "~/assets/images/longbn.jpg";
 
 export default function EditButton() {
     return (
@@ -38,7 +39,7 @@ export default function EditButton() {
                                     style={{ width: "150px" }}
                                 >
                                     <MDBCardImage
-                                        src={Avt}
+                                        src={LogoBoHuc}
                                         alt="Generic placeholder image"
                                         className="mt-4 mb-2 img-thumbnail"
                                         fluid
@@ -50,9 +51,9 @@ export default function EditButton() {
                                     style={{ marginTop: "130px" }}
                                 >
                                     <MDBTypography tag="h5">
-                                        Nguyễn Đức Thanh
+                                        Anh trai vượt ngàn chông gai
                                     </MDBTypography>
-                                    <MDBCardText>Hưng Yên</MDBCardText>
+                                    <MDBCardText>CNTT 16-05</MDBCardText>
                                 </div>
                             </div>
                             <div
@@ -69,15 +70,10 @@ export default function EditButton() {
                                         style={{ backgroundColor: "#f8f9fa" }}
                                     >
                                         <MDBCardText className="font-italic mb-1">
-                                            Chào mọi người, mình có sở thích là
-                                            xem phim, đặc biệt là các bộ anime
-                                            cho nên mình đã rành thời gian rảnh
-                                            tự code ra cho bản thân một trang
-                                            web để xem phim giải trí.
+                                            Chào mọi người, đây là dự án website xem phim miễn phí của anh em mình tạo ra phục vụ cho đồ án môn Công nghệ phần mềm, trong đó Đức Thanh phụ trách phần code, Phạm Thắng thực hiện design giao diện, Hải Phong kiểm thử dự án còn Duy Long phân tích thiết kế yêu cầu.
                                         </MDBCardText>
                                         <MDBCardText className="font-italic mb-1">
-                                            Trang web này có gần như đầy đủ các
-                                            bộ phim và được cập nhật liên tục.
+                                            Trang web này một từ thôi "CHẤT", responsive đầy đủ các loại thiết bị.
                                         </MDBCardText>
                                         <MDBCardText className="font-italic mb-0">
                                             Mình chỉ muốn nói vậy thôi á ^^.
@@ -87,7 +83,7 @@ export default function EditButton() {
                                 </div>
                                 <div className="d-flex justify-content-between align-items-center mb-4">
                                     <MDBCardText className="lead fw-normal mb-0">
-                                        Phim yêu thích
+                                       Anh em mình
                                     </MDBCardText>
                                 </div>
                                 <MDBRow>
