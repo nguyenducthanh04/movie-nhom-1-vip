@@ -26,8 +26,14 @@ function Header() {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+    const logout = () => {
+        navigate('/');
+        localStorage.removeItem("user");
+    }
     const showAccount = () => setIsVisibleAccount(true);
     const hideAccount = () => setIsVisibleAccount(false);
+    const storedUser = localStorage.getItem("user");
+    const parsedUser = JSON.parse(storedUser);
     return (
         <div className={cx("wrapper")}>
             <div className={cx("navbar")}>
@@ -60,21 +66,20 @@ function Header() {
                     </ul>
                 </div>
                 <div className={cx("nav-right")}>
-                    <div className={cx("login")}>
+                
+                   {parsedUser ?  <div className={cx("account")}>
+                        <Tippy render={(attrs) => (
+                   <button className={cx("btn-logout-account")} onClick={logout}>Logout</button>
+                )} placement="bottom" interactive visible={isVisibleAccount} onClickOutside={hideAccount }>  
+                 <div className={cx("name-user")}>
+                            <p onClick={isVisibleAccount ? hideAccount : showAccount}>Xin chào, {parsedUser.name} !</p>
+                        </div>
+                </Tippy>
+                    </div> :     <div className={cx("login")}>
                         <Link to={"/login"} className={cx("redirect-login")}>
                         <button>Login</button>
                         </Link>
-                    </div>
-                    {/* <div className={cx("account")}>
-                        <Tippy render={(attrs) => (
-                   <button className={cx("btn-logout-account")}>Logout</button>
-                )} placement="bottom" interactive visible={isVisibleAccount} onClickOutside={hideAccount }>  
-                 <div className={cx("name-user")}>
-                            <p onClick={isVisibleAccount ? hideAccount : showAccount}>Xin chào, ThanhNguyen !</p>
-                        </div>
-                </Tippy>
-                  
-                    </div> */}
+                    </div>}
                     <div className={cx("search-container")}>
                         <input
                             placeholder="Tìm kiếm phim..."

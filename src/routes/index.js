@@ -8,6 +8,8 @@ import Search from "~/pages/Search";
 import Tvshow from "~/pages/Tvshow";
 import SavedMovie from "~/pages/SavedMovie";
 import About from "~/pages/About";
+import Login from "~/pages/Login/Login";
+import Register from "~/pages/Register/register";
 const publicRoutes = [
     { path: "/", component: Home },
     { path: "/detail/:slug", component: Detail },
@@ -19,6 +21,9 @@ const publicRoutes = [
     { path: "/tv-shows", component: Tvshow },
     { path: "/saved-movie", component: SavedMovie },
     { path: "/about", component: About },
+    { path: "/login", component: Login },
+    { path: "/register", component: Register },
+
 ];
 const privateRoutes = [];
 export { publicRoutes, privateRoutes };

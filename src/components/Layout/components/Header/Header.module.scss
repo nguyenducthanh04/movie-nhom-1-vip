@@ -151,7 +151,12 @@
     color: #17c964;
     cursor: pointer;
 }
-
+.btn-logout-account {
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    background: #17c964;
+}
 // Media queries cho responsive
 @media (max-width: 1150px) {
     .nav-left ul,
