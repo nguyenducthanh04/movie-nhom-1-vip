@@ -44,32 +44,41 @@ nav a {
     width: 100%;
     max-width: 80vw;
 }
-.play {
-    padding: 4px 8px;
+.info {
+    padding: 20px;
+}
+.btn-play {
     color: #fff;
-    text-decoration: none;
-    background-color: #ff006e;
+    border: none;
     font-size: 1.6rem;
     border-radius: 2px;
     transition: 0.3s;
     cursor: pointer;
+    width: 150px;
+    height: 35px;
     margin-right: 6px;
+    border-radius: 3px;
+    background-image: linear-gradient(to right, #fb0, #e43603, #ff6290, #ff5000);
+
 }
-.info {
-    padding: 20px;
+.btn-share {
+    border: none;
+    border-radius: 3px;
+    width: 50px;
+    height: 35px;
+    background: #f8b3c7;
+    background-image: linear-gradient(to right, #25aae1, #024fd6, #04befe, #3f86ed);
 }
 .btn-save {
-    background: transparent;
-    color: #fff;
+    border: none;
+    color: white;
     border-radius: 3px;
     margin-top: 5px;
     margin-left: 6px;
-    height: 30px;
-    width: 100px;
-    &:hover {
-        background-color: #ffbe0b;
-        color: black;
-    }
+    margin-right: 6px;
+    height: 35px;
+    padding: 0 5px;
+    background-image: linear-gradient(to right, #009245, #d0c200, #00a8c5, #d9e021);
 }
 @media (max-width: 768px) {
     h1 {

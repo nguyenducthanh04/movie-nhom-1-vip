@@ -10,6 +10,8 @@ import SavedMovie from "~/pages/SavedMovie";
 import About from "~/pages/About";
 import Login from "~/pages/Login/Login";
 import Register from "~/pages/Register/register";
+import Verify from "~/pages/Verify/Verify";
+import ResetVerify from "~/pages/ResetVerify/ResetVerify";
 const publicRoutes = [
     { path: "/", component: Home },
     { path: "/detail/:slug", component: Detail },
@@ -23,6 +25,8 @@ const publicRoutes = [
     { path: "/about", component: About },
     { path: "/login", component: Login },
     { path: "/register", component: Register },
+    { path: "/verify", component: Verify },
+    { path: "/reset-verify", component: ResetVerify },
 
 ];
 const privateRoutes = [];

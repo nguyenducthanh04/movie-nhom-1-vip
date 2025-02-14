@@ -3,7 +3,7 @@ import classNames from "classnames/bind";
 import styles from "./Login.module.scss";
 import axios from "axios";
 import { Link, useNavigate } from 'react-router-dom';
-
+import ImageLogin from "../../assets/images/monkey-login-md.png"
 const cx = classNames.bind(styles);
 function Login (){
     const [email, setEmail] = useState('');
@@ -30,15 +30,16 @@ function Login (){
   <div id="login" className={cx("signin-card")}>
     <div className={cx("logo-image")}>
       <img
-        src="http://www.officialpsds.com/images/thumbs/Spiderman-Logo-psd59240.png"
+        src={ImageLogin}
         alt="Logo"
         title="Logo"
         width="138"
+        style={{marginBottom: "20px"}}
       />
     </div>
     <h1 className={cx("display1")}>BO HUC</h1>
-    <p className={cx("subhead")}>Anh trai vượt ngàn trông gai</p>
-    {error && <p style={{ color: 'red' }}>{error}</p>}
+    {/* <p className={cx("subhead")}>Anh trai vượt ngàn trông gai</p> */}
+    {error && <><p style={{ color: 'red' }}>{error}</p><div style={{textAlign: 'center'}}><Link to={"/reset-verify"} style={{color: "white", textDecoration: "none"}}>Xác thực tài khoản</Link></div></>}
     <form action="" method="" role="form" onSubmit={handleSubmit}>
       <div id="form-login-username" className={cx("form-group")}>
         <input
@@ -76,14 +77,14 @@ function Login (){
       </div>
       <div>
         <button
-          className={cx("btn", "btn-block", "btn-info", "ripple-effect")}
+          className={cx("btn", "btn-block", "btn-dark", "ripple-effect")}
           type="submit"
           name="Submit"
           alt="sign in"
         >
           Đăng nhập
         </button>
-        <Link to={"/register"}>Đăng ký</Link>
+        <Link to={"/register"} style={{color: "#17c964", textDecoration: "none"}}>Đăng ký</Link>
       </div>
     </form>
   </div>
