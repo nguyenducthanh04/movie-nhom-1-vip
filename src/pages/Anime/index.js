@@ -16,7 +16,8 @@ function Anime() {
         const fetchMovies = async (page) => {
             try {
                 const response = await axios.get(
-                    `https://phimapi.com/v1/api/danh-sach/hoat-hinh?page=${page}`
+                    // `https://phimapi.com/v1/api/danh-sach/hoat-hinh?page=${page}`
+                    `http://localhost:3005/movies/get-anime-movie?page=${page}`
                 );
                 setMovies(response.data.data.items);
                 setTotalPages(response.data.data.params.pagination.totalPages);
@@ -128,14 +129,14 @@ function Anime() {
             <h1>Danh sách phim anime/hoạt hình</h1>
             <div className={cx("movie-list")}>
                 {movies?.map((movie) => (
-                    <Link to={`/detail/${movie.slug}`}>
-                        <div className={cx("product-item")} key={movie._id}>
+                    <Link to={`/detail/${movie.ten_dia_chi_phim}`}>
+                        <div className={cx("product-item")} key={movie.id}>
                             <img
                                 className={cx("img-product")}
-                                src={`https://img.phimapi.com/${movie.poster_url}`}
-                                alt={movie.name}
+                                src={movie.anh_nen_phim}
+                                alt={movie.ten_phim}
                             />
-                            <h3 className={cx("name-product")}>{movie.name}</h3>
+                            <h3 className={cx("name-product")}>{movie.ten_phim}</h3>
                         </div>
                     </Link>
                 ))}

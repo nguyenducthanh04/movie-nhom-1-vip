@@ -38,7 +38,6 @@ function Login (){
       />
     </div>
     <h1 className={cx("display1")}>BO HUC</h1>
-    {/* <p className={cx("subhead")}>Anh trai vượt ngàn trông gai</p> */}
     {error && <><p style={{ color: 'red' }}>{error}</p><div style={{textAlign: 'center'}}><Link to={"/reset-verify"} style={{color: "white", textDecoration: "none"}}>Xác thực tài khoản</Link></div></>}
     <form action="" method="" role="form" onSubmit={handleSubmit}>
       <div id="form-login-username" className={cx("form-group")}>

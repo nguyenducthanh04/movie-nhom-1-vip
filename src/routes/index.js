@@ -14,8 +14,8 @@ import Verify from "~/pages/Verify/Verify";
 import ResetVerify from "~/pages/ResetVerify/ResetVerify";
 const publicRoutes = [
     { path: "/", component: Home },
-    { path: "/detail/:slug", component: Detail },
-    { path: "/watch-movie/:slug", component: WatchMovie },
+    { path: "/detail/:ten_dia_chi_phim", component: Detail },
+    { path: "/watch-movie/:ten_dia_chi_phim", component: WatchMovie },
     { path: "/phim-le", component: MovieOdd },
     { path: "/phim-bo", component: Movies },
     { path: "/anime", component: Anime },
